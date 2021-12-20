@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Quicksand", sans-serif;
+  color: #3a3a3a;
+}
+
+.drawer {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background: #fefefe;
+    width: 250px;
+    /* height: 100vh; */
+    height: 100%;
+    color: black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; */
+  }
+
+
+/* @media (max-width:900px){
+    .drawer {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        background: #fefefe;
+        height: 100vh;
+        height: 100%;
+        color: black;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        transition: left 0.3s ease;
+        display: flex;
+        flex-direction: column;
+       
+      }
+} */
+
+
+.drawer.active {
+  left: 0;
+}
+
+.drawer .menu-button {
+  position: absolute;
+  top: 10px;
+  left: 260px;
+}
+
+.drawer .menu-button .none {
+  display: none;
+}
+
+.drawer .menu-button i {
+  color: black;
+  font-size: 20px;
+}
+
+.drawer .drawer-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 30px;
+  
+}
+
+.drawer .drawer-header i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.drawer .drawer-header h2 {
+  font-size: 20px;
+}
+
+.drawer .drawer-link{
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+}
+
+.drawer .drawer-link::-webkit-scrollbar {
+    display: none;
+  }
+
+  .drawer .drawer-link ul {
+    font-size: 1rem;
+    text-decoration: none;
+    list-style: none;
+  
+  
+  }
+  
+  .drawer .drawer-link ul li {
+    padding: 10px 30px;
+  }
+
+.drawer .drawer-link .main-nav {
+  padding: 30px 0;
+}
+
+.drawer .drawer-link .main-nav .dropdown div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.drawer .drawer-link .main-nav .dropdown div .bxs-chevron-right {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 22px;
+}
+
+.drawer .drawer-link .main-nav .dropdown.active .bxs-chevron-right {
+  transform: rotate(90deg);
+}
+
+
+
+/* another style for hover and active submenus */
+/* .drawer .drawer-link ul li:hover,
+.drawer .drawer-link .main-nav .dropdown.active
+{
+    background: rgb(168, 12, 33);
+    transition: .3s;
+
+} */
+
+.drawer .drawer-link ul li .sub-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.drawer .drawer-link ul li .sub-menu.active {
+  max-height: 300px;
+}
+
+.drawer .drawer-link ul li .sub-menu ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 95%;
+  padding: 5px 15px;
+  margin: 15px 0 15px 5px;
+  background: #fefefe;
+  border-radius: 10px;
+  font-size: 0.85rem;
+}
+.drawer .drawer-link ul li .sub-menu ul li {
+  padding: 10px;
+}
+
+.drawer .drawer-link ul li .sub-menu ul li a {
+  color: #444444;
+}
+
+.drawer .drawer-link ul li a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all 0.2s;
+}
+
+.drawer .drawer-link ul li a i {
+  padding-right: 5px;
+}
